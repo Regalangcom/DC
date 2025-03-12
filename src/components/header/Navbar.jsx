@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isBlurActive, setIsBlurActive] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,22 +56,24 @@ const Navbar = () => {
           : "backdrop-blur-md bg-blackDC/20 shadow-md"
       }`}
     >
-      {["Home", "Works", "About"].map((item, index) => (
-        <motion.div
-          key={index}
-          href="#"
-          className={`text-whiteDC ${
-            isMobile ? "text-[18px]" : "text-[20px]"
-          } font-bold`}
-          animate={{ rotate: activeIndex === index ? 15 : 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={() => setActiveIndex(index)}
-        >
-          <Link to={item === "Home" ? "/" : `/${item.toLocaleLowerCase()}`}>
-            {item}
-          </Link>
-        </motion.div>
-      ))}
+      {["Home", "Works", "About"].map((item, index) => {
+        const path = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+        const isActive = location.pathname === path;
+        return (
+          <motion.div
+            key={index}
+            href="#"
+            className={`text-whiteDC ${
+              isMobile ? "text-[18px]" : "text-[20px]"
+            } font-bold`}
+            animate={{ rotate: isActive ? 15 : 0 }}
+            transition={{ duration: 0.3 }}
+            // onClick={() => setActiveIndex(index)}
+          >
+            <Link to={path}>{item}</Link>
+          </motion.div>
+        );
+      })}
     </nav>
   );
 };
