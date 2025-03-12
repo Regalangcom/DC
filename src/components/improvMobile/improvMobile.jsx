@@ -101,30 +101,33 @@ const ImprovMobile = () => {
         </Link>
       </section>
       <div className="w-full flex justify-center pt-20 pb-10">
-        <motion.button
-          className="relative px-6 py-5 rounded-full w-60 bg-blackDC text-whiteDC font-fontDC text-lg  border-2 border-green-500 overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          {/* Efek Gelombang 1 */}
-          <motion.div
-            className="absolute inset-5 bg-greeDC rounded-full"
-            initial={{ clipPath: "inset(100% 0% 0% 0%)" }} // Tersembunyi di bawah
-            whileHover={{ clipPath: "inset(0% 0% 0% 0%)" }} // Muncul penuh saat hover
-            transition={{ duration: 0.1, ease: "easeInOut" }}
-          />
+        <div>
+          <motion.button
+            className="relative px-6 py-5 rounded-full w-60  bg-blackDC  text-whiteDC text-lg border-2 border-green-500 overflow-hidden"
+            whileHover="hover"
+            initial="initial"
+          >
+            {/* Layer hijau naik dengan curve di atas */}
+            <motion.div
+              className="absolute inset-0  bg-greeDC rounded-full"
+              variants={{
+                initial: { clipPath: "inset(100% 0% 0% 0%)" }, // Mulai dari bawah
+                hover: {
+                  clipPath: [
+                    "inset(100% 0% 0% 0%)", // Start dari bawah
+                    "inset(40% 0% 0% 0% round 50% 50% 0% 0%)", // Curve agak tinggi & tajam
+                    "inset(15% 0% 0% 0% round 95% 95% 0% 0%)", // Curve SUPER lancip
+                    "inset(0% 0% 0% 0%)", // Full naikll menutupi button
+                  ],
+                  transition: { duration: 0.4, ease: "easeInOut" },
+                },
+              }}
+            />
 
-          {/* Efek Gelombang 2 (Delay untuk efek berlapis) */}
-          <motion.div
-            className="absolute inset-5  bg-greeDC  rounded-full"
-            initial={{ clipPath: "inset(100% 0% 0% 0%)" }} // Mulai dari bawah
-            whileHover={{ clipPath: "inset(10% 0% 0% 0%)" }} // Muncul sebagian untuk efek gelombang
-            transition={{ duration: 0.1, ease: "easeInOut", delay: 0.1 }}
-          />
-
-          {/* Teks tetap terlihat di atas */}
-          <span className="relative z-10">See all works</span>
-        </motion.button>
+            {/* Teks tetap di atas */}
+            <span className="relative z-10 text-white">See all works</span>
+          </motion.button>
+        </div>
       </div>
 
       {/* Tombol "See All Works" */}
