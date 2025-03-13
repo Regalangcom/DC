@@ -53,7 +53,7 @@ const Navbar = () => {
       } justify-center rounded-full font-fontDC transition-all duration-300 ${
         isBlurActive
           ? "backdrop-blur-[60px] bg-blackDC/40 shadow-blackDC"
-          : "backdrop-blur-md bg-blackDC/20 shadow-md"
+          : "backdrop-blur-md bg-blackDC/20 "
       }`}
     >
       {["Home", "Works", "About"].map((item, index) => {
@@ -64,7 +64,7 @@ const Navbar = () => {
             key={index}
             href="#"
             className={`text-whiteDC ${
-              isMobile ? "text-[18px]" : "text-[20px]"
+              isMobile ? "text-[18px]" : "text-[24px]"
             } font-bold`}
             animate={{ rotate: isActive ? 15 : 0 }}
             transition={{ duration: 0.3 }}

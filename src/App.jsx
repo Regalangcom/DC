@@ -7,7 +7,6 @@ import ChildrenFirst from "./components/root/childrenFirst.jsx";
 import ChildrenEatiewRoot from "./components/root/ChildrenEatiew.jsx";
 import ChildrenMobile from "./components/root/ChildrenMobile.jsx";
 import ChildrenChoco from "./components/root/ChildrenChoco.jsx";
-import ChildrenEatiew from "./components/componentChildrenEatiew/componentChildrenEatiew.jsx";
 import ChildrenMicro from "./components/root/ChildrenMicro.jsx";
 import ChildrenHarvestRoot from "./components/root/ChildrenHarvest.jsx";
 import ChildrenWorkEatiew from "./components/root/ChildrenWorkEatiew.jsx";

@@ -21,7 +21,7 @@ const Footer = () => {
             (text, index) => (
               <div key={index} className="relative group cursor-pointer">
                 <a className="text-[12px] md:text-[24px] font-fontDC">{text}</a>
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-greeDC transition-all duration-300 group-hover:w-full" />
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-whiteDC transition-all duration-300 group-hover:w-full" />
               </div>
             )
           )}

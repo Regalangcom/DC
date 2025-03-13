@@ -3,23 +3,6 @@ import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { svgCamera, svgHandphone, svgImage } from "../assets";
 function PageFirst() {
-  // const [mouseMotion, setMouseMotion] = useState({ x: 0, y: 0 });
-
-  // useEffect(() => {
-  //   // Menghilangkan kursor default di body
-  //   document.body.style.cursor = "none";
-
-  //   const handleMouseMove = (e) => {
-  //     setMouseMotion({ x: e.clientX, y: e.clientY });
-  //   };
-
-  //   window.addEventListener("mousemove", handleMouseMove);
-  //   return () => {
-  //     window.removeEventListener("mousemove", handleMouseMove);
-  //     document.body.style.cursor = "auto"; // Kembalikan kursor normal saat komponen unmount
-  //   };
-  // }, []);
-
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
@@ -78,7 +61,7 @@ function PageFirst() {
         {/* Elemen kursor custom (lingkaran hijau) */}
         <motion.div
           // className=" bg-greeDC h-6 w-6 rounded-full fixed pointer-events-none z-50"
-          className="fixed bg-greeDC left-0 top-0 w-5 h-5 rounded-full  z-[999] pointer-events-none"
+          className="fixed bg-greeDC left-0 top-0 w-5 h-5 rounded-full  z-[10] pointer-events-none"
           style={{
             translateX: cursorXSpring,
             translateY: cursorYSpring,
