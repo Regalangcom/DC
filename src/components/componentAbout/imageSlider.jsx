@@ -12,7 +12,7 @@ const ImageSlider = () => {
       className="relative flex flex-col items-center justify-center px-4 py-10 w-full max-h-screen overflow-hidden"
     >
       <motion.div
-        className=" gap-4 md:gap-[56px] w-[500%]   flex md:w-[350%] md:h-[500%] "
+        className=" gap-4 md:gap-[40px] w-[500%] flex md:w-[360%] md:h-[960%] "
         drag="x"
         dragConstraints={constraintRef}
       >

@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isBlurActive, setIsBlurActive] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+
+  // Konfigurasi animasi agar lebih smooth
+  const springConfig = { damping: 25, stiffness: 500 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
   const location = useLocation();
 
@@ -46,13 +54,13 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className={`fixed font-fontDC ${
+      className={` fixed font-fontDC   ${
         isMobile ? "w-[400px] bottom-6 px-4 py-5" : "w-[23%] bottom-9 px-7 py-7"
       } left-1/2 transform -translate-x-1/2 z-20 flex ${
         isMobile ? "gap-6" : "gap-12"
       } justify-center rounded-full font-fontDC transition-all duration-300 ${
         isBlurActive
-          ? "backdrop-blur-[60px] bg-blackDC/40 shadow-blackDC"
+          ? "backdrop-blur-[60px] bg-blackDC/40  shadow-blackDC"
           : "backdrop-blur-md bg-blackDC/20 "
       }`}
     >
@@ -68,7 +76,6 @@ const Navbar = () => {
             } font-bold`}
             animate={{ rotate: isActive ? 15 : 0 }}
             transition={{ duration: 0.3 }}
-            // onClick={() => setActiveIndex(index)}
           >
             <Link to={path}>{item}</Link>
           </motion.div>

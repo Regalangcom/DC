@@ -39,7 +39,7 @@ function PagesAbout() {
             className="md:w-[150px] md:h-[70px] w-[30px] md:inline-block  align-top"
           />
         </div>
-        <div className="flex justify-start w-full mb-24 mx-auto">
+        <div className="flex justify-start w-full mb-10 mx-auto">
           <div className=" md:text-[64px] text-[18px] text-textDC font-fontDC leading-snug md:leading-tight">
             <p>
               {" "}

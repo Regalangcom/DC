@@ -27,15 +27,15 @@ function PagesWork() {
   }, [cursorX, cursorY]);
 
   return (
-    <div className="flex flex-col justify-center items-center mt-[4%] relative px-6 sm:px-[72px]">
-      <div className="justify-start items-start relative w-full right-10 mb-10 ">
+    <div className="flex flex-col justify-center  items-center mt-[4%] relative px-6 sm:px-[72px]">
+      <div className="justify-start items-start relative w-full left-2 md:right-10 mb-10 ">
         <img
           src={imageLogoDCWork}
           alt="Logo DC Work"
-          className="w-[150px] h-[70px] inline-block align-top"
+          className="md:w-[150px] md:h-[70px] w-[40px]  inline-block align-top"
         />
       </div>
-      <div className="flex justify-start w-full mb-24 mx-auto">
+      <div className="flex justify-start w-full mb-24 mx-auto left-[2%] relative">
         <div className="md:text-[80px] text-[50px] text-textDC font-fontDC font-normal leading-snug md:leading-tight">
           <h2>A Selection of Our Recent Work</h2>
           <p className="md:text-[24px] text-[16px] text-testDC">
@@ -46,14 +46,16 @@ function PagesWork() {
       </div>
 
       {/* Elemen kursor custom (lingkaran hijau) */}
-      <motion.div
-        className="fixed left-0 top-0 w-5 h-5 rounded-full bg-greeDC z-[999] pointer-events-none"
-        style={{
-          translateX: cursorXSpring,
-          translateY: cursorYSpring,
-          transform: "translate(-50%, -50%)",
-        }}
-      />
+      <div className="">
+        <motion.div
+          className="fixed left-0 top-0 w-5 h-5 rounded-full bg-greeDC z-[10] pointer-events-none"
+          style={{
+            translateX: cursorXSpring,
+            translateY: cursorYSpring,
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+      </div>
     </div>
   );
 }

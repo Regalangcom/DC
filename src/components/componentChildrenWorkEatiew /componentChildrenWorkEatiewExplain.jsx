@@ -29,8 +29,8 @@ const ComponentChildrenWorkEatiewExplain = () => {
           <div className="font-fontDC leading-snug md:leading-tight"></div>
         </div>
 
-        <div className="flex flex-row w-full md:mb-24 mx-auto gap-6 ">
-          <div className="flex  items-center  flex-col max-h-[200px] min-w-[750px] ">
+        <div className="flex flex-row w-full max-w-[1440px] md:mb-24 mx-auto gap-6">
+          <div className="flex  items-center  flex-col max-h-[200px] min-w-[40%] ">
             <div className=" ">
               <p className="font-fontDC md:text-[16px] text-[14px]">SERVICES</p>
               <p className="font-fontDC md:text-[32px] text-[16px] ">
@@ -48,7 +48,7 @@ const ComponentChildrenWorkEatiewExplain = () => {
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col  min-w-[150px] ">
+          <div className="flex flex-1 flex-col  min-w-[60%]">
             {/* Kolom 2 */}
             <ul className="flex flex-col gap-2">
               <li>
@@ -60,10 +60,7 @@ const ComponentChildrenWorkEatiewExplain = () => {
                 <p className="md:text-[32px] text-[16px] font-fontDC">
                   By utilizing social media, especially Instagram, as a product
                   marketing medium, the audience can clearly see the details of
-                  the products being offered. Apart from that, Eattiew also has
-                  a Statement of Work (SOW) which has quite detailed
-                  restrictions, such as no talent is allowed to display their
-                  entire body in any content
+                  the products being offered.
                 </p>
               </li>
               <li>
@@ -87,7 +84,7 @@ const ComponentChildrenWorkEatiewExplain = () => {
         {/* Elemen kursor custom (lingkaran hijau) */}
         <motion.div
           // className=" bg-greeDC h-6 w-6 rounded-full fixed pointer-events-none z-50"
-          className="fixed left-0 top-0 w-8 h-8 rounded-full bg-white mix-blend-difference z-[999] pointer-events-none"
+          className="fixed left-0 top-0 w-8 h-8 rounded-full bg-white  z-[999] pointer-events-none"
           style={{
             translateX: cursorXSpring,
             translateY: cursorYSpring,

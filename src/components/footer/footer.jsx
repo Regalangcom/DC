@@ -16,15 +16,22 @@ const Footer = () => {
         </h2>
 
         {/* Kontak dengan animasi underline */}
+        {/* Kontak dengan animasi underline */}
         <div className="flex flex-col md:flex-row gap-4 mt-5">
-          {["+6289123456789", "designcornerjkt@gmail.com"].map(
-            (text, index) => (
-              <div key={index} className="relative group cursor-pointer">
-                <a className="text-[12px] md:text-[24px] font-fontDC">{text}</a>
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-whiteDC transition-all duration-300 group-hover:w-full" />
-              </div>
-            )
-          )}
+          {[
+            { text: "+6289123456789", href: "tel:+6289123456789" },
+            {
+              text: "designcornerjkt@gmail.com",
+              href: "mailto:designcornerjkt@gmail.com",
+            },
+          ].map(({ text, href }, index) => (
+            <div key={index} className="relative group cursor-pointer">
+              <a href={href} className="text-[12px] md:text-[24px] font-fontDC">
+                {text}
+              </a>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-whiteDC transition-all duration-300 group-hover:w-full" />
+            </div>
+          ))}
         </div>
       </div>
 

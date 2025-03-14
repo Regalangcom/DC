@@ -29,8 +29,8 @@ const ComponentChildrenImproveExplain = () => {
           <div className="font-fontDC leading-snug md:leading-tight"></div>
         </div>
 
-        <div className="flex flex-row w-full md:mb-24 mx-auto gap-6 ">
-          <div className="flex  items-center  flex-col max-h-[200px] min-w-[750px] ">
+        <div className="flex flex-row w-full max-w-[1440px] md:mb-24 mx-auto gap-6 ">
+          <div className="flex  items-center  flex-col max-h-[200px] min-w-[40%] ">
             <div className=" ">
               <p className="font-fontDC md:text-[16px] text-[14px]">SERVICES</p>
               <p className="font-fontDC md:text-[32px] text-[16px] ">
@@ -48,7 +48,7 @@ const ComponentChildrenImproveExplain = () => {
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col  min-w-[150px] ">
+          <div className="flex flex-1 flex-col  min-w-[60%] ">
             {/* Kolom 2 */}
             <ul className="flex flex-col gap-2">
               <li>

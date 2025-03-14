@@ -26,8 +26,8 @@ function ChildrenExplain() {
           <div className="font-fontDC leading-snug md:leading-tight"></div>
         </div>
 
-        <div className="flex flex-row w-full md:mb-24 mx-auto gap-6 ">
-          <div className="flex  items-center flex-col max-h-[200px] min-w-[750px]">
+        <div className="flex flex-row w-full max-w-[1440px] md:mb-24 mx-auto gap-6 ">
+          <div className="flex  items-center flex-col max-h-[200px] min-w-[40%]">
             <div className=" ">
               <p className="font-fontDC md:text-[16px] text-[14px]">SERVICES</p>
               <p className="font-fontDC md:text-[32px] text-[16px] ">
@@ -42,7 +42,7 @@ function ChildrenExplain() {
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col  min-w-[150px] ">
+          <div className="flex flex-1 flex-col  min-w-[60%] ">
             {/* Kolom 2 */}
             <ul className="flex flex-col gap-2">
               <li>
@@ -56,12 +56,12 @@ function ChildrenExplain() {
                   Mobile banking, rely on Creative design to deliver what most
                   costumer demand. In 2023, CIMB Niaga use lifestyle method for
                   OCTO Mobile Campaign which will be distributed via OOH ( Out
-                  of home) media channels. Such ATM, Street LED, Banner etc. Key
-                  features that needed are: Scan QRIS - Portrayed by Matthew
-                  (BA) Bayar tagihan - Portrayed by Maudy (BA) Reksa dana -
-                  Portrayed by Sandra (BA) Tabungan syariah - Portrayed by Cut
-                  Mini (BA) We use a design approach with a gel photography
-                  theme.
+                  of home) media channels. Such ATM, Street LED, Banner etc.{" "}
+                  <br /> Key features that needed are: <br /> Scan QRIS -
+                  Portrayed by Matthew (BA) Bayar tagihan - Portrayed by Maudy
+                  (BA) Reksa dana - Portrayed by Sandra (BA) Tabungan syariah -
+                  Portrayed by Cut Mini (BA) We use a design approach with a gel
+                  photography theme.
                 </p>
               </li>
               <li>
