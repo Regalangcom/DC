@@ -6,6 +6,7 @@ export default {
     colors: {
       greeDC: "#a08942",
       textDC: "#222222",
+      bgDC: "#222222",
       blackDC: "#000000",
       whiteDC: "#F2F2F2",
       whites: "#FFFFFF",

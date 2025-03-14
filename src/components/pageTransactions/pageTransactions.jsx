@@ -22,7 +22,7 @@ const PageTransactions = ({ children }) => {
           initial={{ y: 0 }}
           animate={{ y: "-100vh" }} // Semua naik ke atas setelah menyatu
           transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
-          className="fixed inset-0 bg-blackDC z-50 flex justify-center items-center overflow-hidden"
+          className="fixed inset-0 bg-bgDC z-50 flex justify-center items-center overflow-hidden"
         >
           {/* Lapisan bawah naik hanya sampai tengah */}
           <motion.div
